@@ -17,15 +17,22 @@ public:
 		GAME_OVER_ID,
 		NUM_SCENES
 	};
-	class TRANSITION* transition() { return Transition; }
 private:
-	class SCENE * Scenes[NUM_SCENES];
+	class SCENE* Scenes[NUM_SCENES];
 	SCENE_ID CurSceneId;
 	class TRANSITION* Transition = nullptr;
+public:
+	void changScene(SCENE_ID sceneId);
+	class TRANSITION* transition() { return Transition; }
+//キャラクター
+private:
+	class PLAYER* Player;
+public:
+	void draw();
+	class PLAYER* player() { return Player; }
 public:
 	GAME();
 	~GAME();
 	void run();
-	void changScene(SCENE_ID sceneId);
 };
 

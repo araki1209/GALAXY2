@@ -28,6 +28,9 @@
     <ClCompile Include="STAGE2.cpp" />
     <ClCompile Include="STAGE3.cpp" />
     <ClCompile Include="CONTAINER.cpp" />
+    <ClCompile Include="TRANSITION.cpp" />
+    <ClCompile Include="TRANSITION_FADE.cpp" />
+    <ClCompile Include="PLAYER.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GAME.h" />
@@ -40,5 +43,8 @@
     <ClInclude Include="STAGE2.h" />
     <ClInclude Include="STAGE3.h" />
     <ClInclude Include="CONTAINER.h" />
+    <ClInclude Include="TRANSITION.h" />
+    <ClInclude Include="TRANSITION_FADE.h" />
+    <ClInclude Include="PLAYER.h" />
   </ItemGroup>
 </Project>

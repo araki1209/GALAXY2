@@ -15,6 +15,7 @@ public:
     GAME_CLEAR(class GAME* game);
     ~GAME_CLEAR();
     void create();
+    void init();
     void draw();
     void nextScene();
 };

@@ -14,6 +14,7 @@ public:
     GAME_OVER(class GAME* game);
     ~GAME_OVER();
     void draw();
+    void init();
     void create();
     void nextScene();
 };

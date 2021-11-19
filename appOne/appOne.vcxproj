@@ -158,6 +158,7 @@
     <ClCompile Include="GAME_OBJ.cpp" />
     <ClCompile Include="GAME_OVER.cpp" />
     <ClCompile Include="gmain.cpp" />
+    <ClCompile Include="PLAYER.cpp" />
     <ClCompile Include="SCENE.cpp" />
     <ClCompile Include="STAGE1.cpp" />
     <ClCompile Include="STAGE2.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="GAME_CLEAR.h" />
     <ClInclude Include="GAME_OBJ.h" />
     <ClInclude Include="GAME_OVER.h" />
+    <ClInclude Include="PLAYER.h" />
     <ClInclude Include="SCENE.h" />
     <ClInclude Include="STAGE1.h" />
     <ClInclude Include="STAGE2.h" />

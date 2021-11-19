@@ -4,6 +4,7 @@
 #include"GAME_CLEAR.h"
 #include"GAME_OVER.h"
 #include"TRANSITION_FADE.h"
+#include"PLAYER.h"
 class CONTAINER
 {
 	struct DATA {
@@ -11,6 +12,7 @@ class CONTAINER
 		GAME_CLEAR::DATA game_clear;
 		GAME_OVER::DATA game_over;
 		TRANSITION_FADE::DATA transition_fade;
+		PLAYER::DATA player;
 	};
 	DATA Data;
 public:
@@ -21,5 +23,6 @@ public:
 	const GAME_CLEAR::DATA& game_clear(){ return Data.game_clear; }
 	const GAME_OVER::DATA& game_over() { return Data.game_over; }
 	const TRANSITION_FADE::DATA& transition_fade() { return Data.transition_fade; }
+	const PLAYER::DATA& player() { return Data.player; }
 };
 

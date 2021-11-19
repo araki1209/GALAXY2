@@ -10,7 +10,8 @@ public:
     STAGE1(class GAME* game);
     ~STAGE1();
     void init();
-    void draw();
     void create();
+    void update();
+    void draw();
     void nextScene();
 };
