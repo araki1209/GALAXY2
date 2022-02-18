@@ -5,7 +5,11 @@ class STAGE1 :
 {
 public:
     struct DATA {
+        int img;
+        int no;
     };
+private:
+    struct DATA Stage1;
 public:
     STAGE1(class GAME* game);
     ~STAGE1();
@@ -14,4 +18,5 @@ public:
     void update();
     void draw();
     void nextScene();
+    int no();
 };

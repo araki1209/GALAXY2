@@ -1,8 +1,6 @@
 #pragma once
-#include "GAME_OBJ.h"
 #include "ANIM.h"
-#include"libOne.h"
-class PLAYER :
+class PLAYER2 :
     public ANIM
 {
 public:
@@ -31,18 +29,19 @@ public:
         COLOR color;
     };
 private:
-     DATA Player;
+    DATA Player2;
 public:
-    PLAYER(class GAME* game);
+    PLAYER2(class GAME* game);
     void create();
     void init();
     void update();
-      void move();
-      void collision();
-      int normlize(float x,float y);
-      void launch();
+    void move();
+    void collision();
+    int normlize(float x, float y);
+    void launch();
     void draw();
-    VECTOR2 pos() { return Player.pos; }
-    int hp() { return Player.hp; }
+    VECTOR2 pos() { return Player2.pos; }
+    int hp() { return Player2.hp; }
 };
+
 

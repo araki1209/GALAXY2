@@ -31,6 +31,17 @@
     <ClCompile Include="TRANSITION.cpp" />
     <ClCompile Include="TRANSITION_FADE.cpp" />
     <ClCompile Include="PLAYER.cpp" />
+    <ClCompile Include="P_BULLETS.cpp" />
+    <ClCompile Include="BULLETS.cpp" />
+    <ClCompile Include="BACK_IMG.cpp" />
+    <ClCompile Include="ENEMYm.cpp" />
+    <ClCompile Include="ENEMYb.cpp" />
+    <ClCompile Include="E_BULLETS.cpp" />
+    <ClCompile Include="BOSS.cpp" />
+    <ClCompile Include="HP_GAUGE.cpp" />
+    <ClCompile Include="ANIM.cpp" />
+    <ClCompile Include="PLAYER2.cpp" />
+    <ClCompile Include="PLAYERCHANGE.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GAME.h" />
@@ -46,5 +57,16 @@
     <ClInclude Include="TRANSITION.h" />
     <ClInclude Include="TRANSITION_FADE.h" />
     <ClInclude Include="PLAYER.h" />
+    <ClInclude Include="P_BULLETS.h" />
+    <ClInclude Include="BULLETS.h" />
+    <ClInclude Include="BACK_IMG.h" />
+    <ClInclude Include="ENEMYm.h" />
+    <ClInclude Include="ENEMYb.h" />
+    <ClInclude Include="E_BULLETS.h" />
+    <ClInclude Include="BOSS.h" />
+    <ClInclude Include="HP_GAUGE.h" />
+    <ClInclude Include="ANIM.h" />
+    <ClInclude Include="PLAYER2.h" />
+    <ClInclude Include="PLAYERCHANGE.h" />
   </ItemGroup>
 </Project>

@@ -12,6 +12,7 @@ public:
         VECTOR2 pos;
         //char str[16];
         int img;
+        int p_data;
     };
 private:
     DATA Title;
@@ -22,5 +23,6 @@ public:
     void draw();
     void create();
     void nextScene();
+    int p_Data() { return Title.p_data; }
 };
 
