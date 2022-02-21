@@ -6,19 +6,26 @@
 #include"BACK_IMG.h"
 #include"PLAYER.h"
 #include"PLAYER2.h"
+#include"PLAYER3.h"
+#include"PLAYER4.h"
 #include"ENEMYm.h"
 #include"ENEMYb.h"
 #include "BULLETS.h"
 #include"BOSS.h"
 #include"STAGE1.h"
+#include"STAGE2.h"
+#include"STAGE3.h"
 #include"HP_GAUGE.h"
 #include"PLAYERCHANGE.h"
 #include"TRANSITION_FADE.h"
 class CONTAINER
 {
 	struct DATA {
-		TITLE::DATA title;
 		STAGE1::DATA stage1;
+		STAGE2::DATA stage2;
+		STAGE3::DATA stage3;
+
+		TITLE::DATA title;
 		GAME_CLEAR::DATA game_clear;
 		GAME_OVER::DATA game_over;
 		BACK_IMG::DATA back_img;
@@ -26,6 +33,8 @@ class CONTAINER
 
 		PLAYER::DATA player;
 		PLAYER2::DATA player2;
+		PLAYER3::DATA player3;
+		PLAYER4::DATA player4;
 		ENEMYm::DATA enemyM;
 		ENEMYb::DATA enemyB;
 		BOSS::DATA boss;
@@ -44,6 +53,8 @@ public:
 
 	const TITLE::DATA& title() { return Data.title; }
 	const STAGE1::DATA& stage1() { return Data.stage1; }
+	const STAGE2::DATA& stage2() { return Data.stage2; }
+	const STAGE3::DATA& stage3() { return Data.stage3; }
 	const GAME_CLEAR::DATA& game_clear(){ return Data.game_clear; }
 	const GAME_OVER::DATA& game_over() { return Data.game_over; }
 
@@ -53,6 +64,10 @@ public:
 
 	const PLAYER::DATA& player() { return Data.player; }
 	const PLAYER2::DATA& player2() { return Data.player2; }
+	const PLAYER3::DATA& player3() { return Data.player3; }
+	const PLAYER4::DATA& player4() { return Data.player4; }
+
+
 	const ENEMYm::DATA& enemyM() { return Data.enemyM; }
 	const ENEMYb::DATA& enemyB() { return Data.enemyB; }
 	const BOSS::DATA& boss() { return Data.boss; }

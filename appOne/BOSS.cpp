@@ -33,7 +33,7 @@ void BOSS::move() {
 	for (int i = 0; i < Boss.curNum; i++) {
 		Bosses[i].pos.x += Boss.advSpeedX * delta;
 		Bosses[i].pos.y += Boss.advSpeedY * delta ;
-		if (Bosses[i].pos.x >= width|| Boss.cenPos.x <= 0) {
+		if (Bosses[i].pos.x >= width|| Bosses[i].pos.x <= 0) {
 			Boss.advSpeedX = Boss.advSpeedX * -1;
 		}
 		if (Bosses[i].pos.y <= 0 || Bosses[i].pos.y >= height/2) {
@@ -83,6 +83,8 @@ void BOSS::collision() {
 }
 void BOSS::draw() {
 	for (int i = 0; i < Boss.totalNum; i++) {
-		image(Boss.img, Bosses[i].pos.x, Bosses[i].pos.y, 0, 2);
+		image(Boss.img, Bosses[i].pos.x, Bosses[i].pos.y, 0, 0.7);
+		game()->hpGauge()->draw(Bosses[i].pos, Boss.hpGaugeOfst, Bosses[i].hp);
+
 	}
 }

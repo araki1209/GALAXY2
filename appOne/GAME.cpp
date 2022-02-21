@@ -11,6 +11,8 @@
 #include"TRANSITION.h"
 #include"PLAYER.h"
 #include"PLAYER2.h"
+#include"PLAYER3.h"
+#include"PLAYER4.h"
 #include"P_BULLETS.h"
 #include"ENEMYm.h"
 #include"ENEMYb.h"
@@ -39,6 +41,8 @@ GAME::GAME(){
 
     Player = new PLAYER(this);
     Player2 = new PLAYER2(this);
+    Player3 = new PLAYER3(this);
+    Player4 = new PLAYER4(this);
     PlayerBullets = new P_BULLETS(this);
 
     EnemiesM = new ENEMYm(this);
@@ -59,10 +63,14 @@ GAME::~GAME(){
 
     delete Player;
     delete Player2;
-    delete PlayerBullets;
+    delete Player3;
+    delete Player4;
+
     delete EnemiesM;
     delete EnemiesB;
     delete Bosses;
+
+    delete PlayerBullets;
     delete EnemyMBullets;
     delete Playerchange;
     delete HpGauge;
@@ -84,6 +92,8 @@ void GAME::run() {
    
     Player->create();
     Player2->create();
+    Player3->create();
+    Player4->create();
     EnemiesM->create();
     EnemiesB->create();
     Bosses->create();

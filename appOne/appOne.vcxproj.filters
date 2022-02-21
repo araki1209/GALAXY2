@@ -42,6 +42,8 @@
     <ClCompile Include="ANIM.cpp" />
     <ClCompile Include="PLAYER2.cpp" />
     <ClCompile Include="PLAYERCHANGE.cpp" />
+    <ClCompile Include="PLAYER3.cpp" />
+    <ClCompile Include="PLAYER4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GAME.h" />
@@ -68,5 +70,7 @@
     <ClInclude Include="ANIM.h" />
     <ClInclude Include="PLAYER2.h" />
     <ClInclude Include="PLAYERCHANGE.h" />
+    <ClInclude Include="PLAYER3.h" />
+    <ClInclude Include="PLAYER4.h" />
   </ItemGroup>
 </Project>

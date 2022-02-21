@@ -92,7 +92,6 @@ void ENEMYm::collision() {
 }
 void ENEMYm::draw() {
 	for (int i = 0; i < EnemyM.curNum; i++) {
-		imageColor(Enemies[i].color);
 		image(EnemyM.img, Enemies[i].pos.x, Enemies[i].pos.y, 0, 2);
 		game()->hpGauge()->draw(Enemies[i].pos, EnemyM.hpGaugeOfst, Enemies[i].hp);
 	}

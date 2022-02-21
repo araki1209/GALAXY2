@@ -16,7 +16,8 @@ void TITLE::create() {
 void TITLE::init() {
 	game()->transition()->inTrigger();
 }
-void TITLE::draw(){	clear(Title.backColor);
+void TITLE::draw(){	
+	clear(Title.backColor);
 	fill(Title.textColor);
     textSize(Title.textSize);
 	image(Title.img, 0, 0,0,1);

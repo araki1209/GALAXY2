@@ -14,9 +14,9 @@ void GAME_CLEAR::create() {
 	Game_clear = game()->container()->game_clear();
 }
 void GAME_CLEAR::draw() {
-	clear();
+	clear(255,255,255);
 	printSize(300);
-	fill(255);
+	fill(0,255,0);
 	print("CLEAR");
 	//image(Game_clear.img, 800, 500, 0, 1);
 	game()->transition()->draw();

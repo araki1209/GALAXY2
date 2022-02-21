@@ -20,10 +20,6 @@ public:
 //ƒLƒƒƒ‰
 public:
 	enum PLAYER_ID {
-		//PLAYER1_ID=0,
-	    //PLAYER2_ID=1,
-		//PLAYER3_ID=2,
-		//PLAYER4_ID=3,
 		PLAYER1_ID = 1,
 		PLAYER2_ID=2,
 		PLAYER3_ID=3,
@@ -47,6 +43,8 @@ public:
 private:
 	class PLAYER* Player;
 	class PLAYER2* Player2;
+	class PLAYER3* Player3;
+	class PLAYER4* Player4;
 	class P_BULLETS* PlayerBullets;
 	class ENEMYm* EnemiesM;
 	class ENEMYb* EnemiesB;
@@ -59,6 +57,8 @@ public:
 	void draw();
 	class PLAYER* player() { return Player; }
 	class PLAYER2* player2() { return Player2; }
+	class PLAYER3* player3() { return Player3; }
+	class PLAYER4* player4() { return Player4; }
 	class P_BULLETS* playerBullets() { return PlayerBullets; }
 	class ENEMYm * enemiesM() { return EnemiesM; }
 	class ENEMYb* enemiesB() { return EnemiesB; }

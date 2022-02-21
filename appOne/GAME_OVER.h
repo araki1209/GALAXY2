@@ -5,7 +5,7 @@ class GAME_OVER :
 {
 public:
     struct DATA {
-        int ima;
+        int img;
         VECTOR2 pos;
     };
 private:

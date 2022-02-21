@@ -4,6 +4,8 @@
 #include"GAME.h"
 #include"PLAYER.h"
 #include"PLAYER2.h"
+#include"PLAYER3.h"
+#include"PLAYER4.h"
 #include"P_BULLETS.h"
 #include"ENEMYm.h"
 #include"E_BULLETS.h"
@@ -19,55 +21,70 @@ STAGE1::~STAGE1() {
 void STAGE1::create() {
 }
 void STAGE1::init() {
-	if (game()->title()->p_Data() != 0) {
-		game()->player()->init();
-	}
-	else {
-		game()->player2()->init();
-	}
 	game()->player()->init();
 	game()->player2()->init();
+	game()->player3()->init();
+	game()->player4()->init();
 	game()->playerBullets()->init();
 	game()->enemiesM()->init();
 	game()->enemyMBullets()->init();
 	game()->transition()->inTrigger();
+	Stage1.ep = 0;
 }
 void STAGE1::update(){
-	if (game()->title()->p_Data() != 0) {
-		game()->player()->update();
+	if (Stage1.ep != 0) {
+		if (Stage1.ep == 1) {
+			game()->player()->update();
+		}
+		else if (Stage1.ep == 2) {
+			game()->player2()->update();
+		}
+		else if (Stage1.ep == 3) {
+			game()->player3()->update();
+		}
+		else if (Stage1.ep == 4) {
+			game()->player4()->update();
+		}
+		game()->playerBullets()->update();
+		game()->enemiesM()->update();
+		game()->enemyMBullets()->update();
 	}
 	else {
-		game()->player2()->update();
+		if (isTrigger(KEY_Z)) {
+			Stage1.ep = 1;
+		}
+		else if (isTrigger(KEY_X)) {
+			Stage1.ep = 2;
+		}
+		else if (isTrigger(KEY_C)) {
+			Stage1.ep = 3;
+		}
+		else if (isTrigger(KEY_P)) {
+			Stage1.ep = 4;
+		}
 	}
-	//switch (game()->title()->p_Data()) {
-	//case 0:game()->player()->update();
-	//	break;
-	//case 1:game()->player2()->update(); 
-	//	break;
-	//}
-	game()->playerBullets()->update();
-	game()->enemiesM()->update();
-	game()->enemyMBullets()->update();
 }
 void STAGE1::draw() {
 	clear();
 	game()->back_img()->draw();
-	if (game()->playerchange()->repChange() !=0) {
-		game()->player()->draw();
+	if (Stage1.ep != 0) {
+		if (Stage1.ep == 1) {
+			game()->player()->draw();
+		}
+		else if (Stage1.ep == 2) {
+			game()->player2()->draw();
+		}
+		else if (Stage1.ep == 3) {
+			game()->player3()->draw();
+		}
+		else if (Stage1.ep == 4) {
+			game()->player4()->draw();
+		}
+		game()->enemyMBullets()->draw();
+		game()->playerBullets()->draw();
+		game()->enemiesM()->draw();
 	}
-	else {
-		game()->player2()->draw();
-	}
-	//switch (game()->title()->p_Data()) {
-	//case 0:game()->player()->draw(); 
-	//	break;
-	//case 1:game()->player2()->draw();
-	//	break;
-	//}
-	game()->enemyMBullets()->draw();
-	game()->playerBullets()->draw();
-	game()->enemiesM()->draw();
-	game()->transition()->draw();
+		game()->transition()->draw();
 }
 void STAGE1::nextScene() {
 	if (game()->enemiesM()->curNum()<=0) {
@@ -77,7 +94,8 @@ void STAGE1::nextScene() {
 		}
 	}
 
-	else if (game()->player()->hp()<=0) {
+	else if (game()->player()->hp()<=0||game()->player2()->hp() <= 0||
+		     game()->player3()->hp() <= 0||game()->player4()->hp()<=0){
 	     game()->transition()->outTrigger();
 	     if (game()->transition()->outEndFlag()) {
 			  game()->changScene(GAME::GAME_OVER_ID);

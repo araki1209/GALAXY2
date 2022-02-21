@@ -12,6 +12,8 @@ public:
     DATA pc;
 public:
     PLAYERCHANGE(class GAME* game);
+    void init();
+    void create();
     void pchange();
     int repChange() { return pc.pData;}
 };

@@ -15,9 +15,7 @@ void GAME_OVER::create() {
 }
 void GAME_OVER::draw() {
 	clear();
-	printSize(300);
-	fill(255);
-	print("Game over");
+	image(Game_over.img, 0, 0);
 	game()->transition()->draw();
 }
 void GAME_OVER::nextScene() {

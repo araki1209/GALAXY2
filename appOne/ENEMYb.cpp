@@ -44,7 +44,6 @@ void ENEMYb::move() {
 		Enemies[i].pos.x = px;
 		Enemies[i].pos.y = py;
 
-		//Enemies[i].pos.x += EnemyB.advSpeed * delta;
 		EnemyB.cenPos.x += EnemyB.advSpeed * delta;
 
 
@@ -95,7 +94,6 @@ void ENEMYb::collision(){
 }
 void ENEMYb::draw(){
 	for (int i = 0; i < EnemyB.curNum; i++) {
-		imageColor(Enemies[i].color);
 		image(EnemyB.img, Enemies[i].pos.x, Enemies[i].pos.y, 0, 2);
 		game()->hpGauge()->draw(Enemies[i].pos, EnemyB.hpGaugeOfst, Enemies[i].hp);
 	}

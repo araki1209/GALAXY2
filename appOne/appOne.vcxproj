@@ -168,6 +168,8 @@
     <ClCompile Include="HP_GAUGE.cpp" />
     <ClCompile Include="PLAYER.cpp" />
     <ClCompile Include="PLAYER2.cpp" />
+    <ClCompile Include="PLAYER3.cpp" />
+    <ClCompile Include="PLAYER4.cpp" />
     <ClCompile Include="PLAYERCHANGE.cpp" />
     <ClCompile Include="P_BULLETS.cpp" />
     <ClCompile Include="SCENE.cpp" />
@@ -200,6 +202,8 @@
     <ClInclude Include="HP_GAUGE.h" />
     <ClInclude Include="PLAYER.h" />
     <ClInclude Include="PLAYER2.h" />
+    <ClInclude Include="PLAYER3.h" />
+    <ClInclude Include="PLAYER4.h" />
     <ClInclude Include="PLAYERCHANGE.h" />
     <ClInclude Include="P_BULLETS.h" />
     <ClInclude Include="SCENE.h" />
